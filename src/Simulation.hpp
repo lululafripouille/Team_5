@@ -35,6 +35,10 @@ class Simulation
 		 * 
 		 * */  
 		virtual ~Simulation() = default; 
+		
+		/**getter of attribut evolution_pop
+		 */
+		std::vector<Generation*> getEvolutionPop();
 
 };
 

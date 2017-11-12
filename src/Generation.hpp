@@ -5,8 +5,6 @@
 
 #include <vector>
 
-
-
 /*! \class Generation
  * 
  * represents the state of all the alleles (at this point just the 
@@ -22,7 +20,7 @@ class Generation
 		std::vector<Allele*> individual_;
 		std::vector<double> frequency_;
 		
-		double generationLength_; 
+		double generation_length_; 
 	
 	public: 
 	
@@ -39,7 +37,17 @@ class Generation
 		/** updates every step until the generation lenght is reached
 		*@param duration of one step //could be defined as a cst somewhere else (remarque au groupe)
 		*/
-		void update(double step); 
+		void update(double step);
+		
+		/**getter
+		 */
+		std::vector<Allele*> getIndividual();
+		/**getter of frequency
+		*/
+		std::vector<double> getFrequency();
+		/**getter of the lenght of one generation
+		 */
+		double getGenerationLength();	
 
 };
 

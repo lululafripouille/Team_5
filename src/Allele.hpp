@@ -1,8 +1,8 @@
 #pragma once 
-
+/*
 #ifndef ALLELE_H
 #define ALLELE_H
-
+*/
 #include <vector>
 #include <fstream> 
 
@@ -23,7 +23,7 @@ class Allele
 	
 		DNAbases sequences_;
 		std::vector<double> frequences_; 
-		unsigned int numberOfAllele_;
+		unsigned int nb_allele_;
 		
 		/** retrieves the DNA sequence of the alleles contained 
 		 * in the genotype-database and initialises the attribut sequences_
@@ -43,7 +43,15 @@ class Allele
 		 * 
 		 * */  
 		 ~Allele(); 
+		 
+		 DNAbases getSequences();
+
+		 std::vector<double> getFrequences();
+
+		 /**get number of allele
+		  */
+		 unsigned int getNbAllele();
 
 };
 
-#endif
+//#endif
