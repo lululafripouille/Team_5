@@ -1,5 +1,3 @@
-#pragma once 
-
 #ifndef GENERATION_H
 #define GENERATION_H
 

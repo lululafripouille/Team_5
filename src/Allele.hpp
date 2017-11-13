@@ -1,12 +1,10 @@
-#pragma once 
-/*
 #ifndef ALLELE_H
 #define ALLELE_H
-*/
+
 #include <vector>
 #include <fstream> 
 
-typedef std::vector<char> DNAbases;
+typedef std::vector<std::vector<char>> DNAbases;
 
 
 /*! \class Allele
@@ -54,4 +52,3 @@ class Allele
 
 };
 
-//#endif
