@@ -6,14 +6,10 @@ Allele::~Allele(){}
     
 void Allele::readFromFile(ostream& Data){}
 
-DNAbases Allele::getSequences(){
-	return sequences_;
+std::string Allele::getSequence(){
+	return sequence_;
 }
 
-std::vector<double> Allele::getFrequences(){
-	return frequences_;
+double Allele::getFrequency(){
+	return frequency_;
 } 
-
-unsigned int Allele::getNbAllele(){
-	return nb_allele_;
-}

@@ -4,16 +4,8 @@ Generation::Generation(){}
 		
 Generation::~Generation(){}
 	
-void Generation::update(double step){}
+void Generation::update(){}
 
 std::vector<Allele*> Generation::getIndividual(){
-	return individual_;
+	return individuals_;
 }
-
-std::vector<double> Generation::getFrequency(){
-	return frequency_;
-}
-		
-double Generation::getGenerationLength(){
-	return generation_length_;
-}	

@@ -15,10 +15,7 @@ class Generation
 {
 	private: 
 	
-		std::vector<Allele*> individual_;
-		std::vector<double> frequency_;
-		
-		double generation_length_; 
+		std::vector<Allele*> individuals_;
 	
 	public: 
 	
@@ -35,17 +32,13 @@ class Generation
 		/** updates every step until the generation lenght is reached
 		*@param duration of one step //could be defined as a cst somewhere else (remarque au groupe)
 		*/
-		void update(double step);
+		void update();
 		
 		/**getter
+		 * 
 		 */
-		std::vector<Allele*> getIndividual();
-		/**getter of frequency
-		*/
-		std::vector<double> getFrequency();
-		/**getter of the lenght of one generation
-		 */
-		double getGenerationLength();	
+		std::vector<Allele*> getIndividuals();
+
 
 };
 

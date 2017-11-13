@@ -4,8 +4,6 @@
 #include <vector>
 #include <fstream> 
 
-typedef std::vector<std::vector<char>> DNAbases;
-
 
 /*! \class Allele
  * 
@@ -19,10 +17,9 @@ class Allele
 {
 	private: 
 	
-		DNAbases sequences_;
-		std::vector<double> frequences_; 
-		unsigned int nb_allele_;
-		
+		std::string sequence_;
+		double frequency_; 
+				
 		/** retrieves the DNA sequence of the alleles contained 
 		 * in the genotype-database and initialises the attribut sequences_
 		 *   
@@ -42,13 +39,9 @@ class Allele
 		 * */  
 		 ~Allele(); 
 		 
-		 DNAbases getSequences();
+		 std::string getSequence();
 
-		 std::vector<double> getFrequences();
-
-		 /**get number of allele
-		  */
-		 unsigned int getNbAllele();
+		 double getFrequency();
 
 };
 
