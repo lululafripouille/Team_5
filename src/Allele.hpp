@@ -24,14 +24,14 @@ class Allele
 		 * in the genotype-database and initialises the attribut sequences_
 		 *   
 		 * */ 
-		void readFromFile(ostream& Data);
+		void readFromFile(std::ostream& Data);
 	
 	public: 
 	
 		/** \fn allele constructor 
 		 *
 		 * */ 
-		Allele(); 
+		Allele(std::string sequence, double frequency); 
 		
 		/** allele destructor 
 		 *  
@@ -42,6 +42,9 @@ class Allele
 		 std::string getSequence();
 
 		 double getFrequency();
+		 
+		 void setFrequency(double freq);
 
 };
 
+#endif

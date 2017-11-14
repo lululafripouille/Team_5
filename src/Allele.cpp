@@ -1,10 +1,11 @@
 #include "Allele.hpp"
 
-Allele::Allele(){}
+Allele::Allele(std::string sequence, double frequency)
+: sequence_(sequence), frequency_(frequency) {}
 	 
 Allele::~Allele(){}
     
-void Allele::readFromFile(ostream& Data){}
+void Allele::readFromFile(std::ostream& Data){}
 
 std::string Allele::getSequence(){
 	return sequence_;
@@ -13,3 +14,9 @@ std::string Allele::getSequence(){
 double Allele::getFrequency(){
 	return frequency_;
 } 
+
+void Allele::setFrequency(double freq) {
+	frequency_ = freq;
+}
+
+

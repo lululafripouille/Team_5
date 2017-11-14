@@ -2,6 +2,10 @@
 #define GENERATION_H
 
 #include <vector>
+#include <map>
+#include <string>
+#include <memory>
+#include "Allele.hpp"
 
 /*! \class Generation
  * 
@@ -15,14 +19,17 @@ class Generation
 {
 	private: 
 	
-		std::vector<Allele*> individuals_;
-	
+		std::vector<Allele*> alleles_;
+		int nb_individuals_;
+		
 	public: 
 	
 		/** \fn generation constructor 
 		 *
 		 * */ 
-		Generation(); 
+		Generation(std::vector<std::string> list); 
+		
+		Generation();
 		
 		/** generation destructor 
 		 * 
@@ -34,10 +41,23 @@ class Generation
 		*/
 		void update();
 		
-		/**getter
-		 * 
+		/**getter of all types of Alleles
 		 */
-		std::vector<Allele*> getIndividuals();
+		std::vector<Allele*> getAlleles();
+		
+		int getNbIndividuals();
+		
+		void allelesPushBack(Allele*);
+		
+		void setAlleleFrequency(int i, double frequency);
+		
+		void setGenerationLength(int i);
+		
+		/** \fn compare
+		 */
+		 bool compare(std::string s1, std::string s2);
+		 
+		 void sort(std::vector<std::string> all);
 
 
 };
